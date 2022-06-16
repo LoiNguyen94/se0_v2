@@ -50,9 +50,6 @@ function App({ Component, pageProps }: AppProps) {
   }, [loading]);
   return (
     <>
-      <Head>
-        <title>Welcome to consumer!</title>
-      </Head>
       <main className="app">
         {!loading ? <AnyComponent {...pageProps} /> : <Loading />}
         <ToastContainer

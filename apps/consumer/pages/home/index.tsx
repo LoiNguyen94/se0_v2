@@ -38,7 +38,7 @@ function HomeIndex(props: HomeIndex) {
     <TransitionLayout
       title="Tất cả sản phẩm"
       description="Mua mọi thứ"
-      photo=""
+      photo="https://i.cartoonnetwork.com/prismo/apps/icon/lq5Ca_Fs.png"
       showTab={true}
     >
       <HomeConsumer data={items} position={positionTab} list_category={list_category}/>
