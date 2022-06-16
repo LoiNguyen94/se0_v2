@@ -4,7 +4,6 @@ import styles from './layout.module.scss';
 import React, { ReactNode } from 'react';
 import TabBottom from './tab_bottom';
 import { useWindowSize } from '@monorepo/function-shares';
-import Head from 'next/head';
 
 export interface LayoutProps {
   children?: ReactNode;
@@ -25,16 +24,6 @@ export function MainLayout({
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta
-          name="viewport"
-          content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"
-        />
-        <meta property="og:title" content={title} key="title" />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={photo} />
-      </Head>
       <div style={{ height: height }} className={styles['container']}>
         <div style={{ width: widthFixed }} className={styles['frame']}>
           {children}
