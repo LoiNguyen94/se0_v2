@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <meta
           property="og:image"
           content={
-            "https://play-lh.googleusercontent.com/4muB4i5PE_vT7ZcTMvEHFSzwfDEjrL04-MuXDZMpgNtfqGtw3i06gzDBfePkJqa9na8"
+            "https://gamek.mediacdn.vn/133514250583805952/2021/1/15/1-16106966278281009206635.jpg"
           }
         />
         <link rel="icon" href="/favicon.ico" />
