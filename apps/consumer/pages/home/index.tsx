@@ -33,17 +33,7 @@ function HomeIndex(props: HomeIndex) {
     };
     getProfile();
   }, []);
-  // const itemss = [
-  //   {
-  //     id: 1,
-  //     page: <TabMio data={items} />,
-  //   },
-  //   {
-  //     id: 2,
-  //     page: <TabPartner />,
-  //   },
-  // ];
-
+ 
   return (
     <TransitionLayout
       title="Tất cả sản phẩm"
