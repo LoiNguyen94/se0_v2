@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mio
 
-## Getting Started
+<p style="text-align: center;"><img src="https://dev-shop.itaphoa.com/assets/logo.png" width="450"></p>
 
-First, run the development server:
+<p style='font-size:20px;'>
+ <span>&#9749; </span>
+ <strong >Thiết lập project Nx</strong>
+ <span> &#9749;</span>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<div>
+Link tham khảo: 
+<span style="text-decoration: underline;color:blue">https://nx.dev/</span>
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- <div>
+<span style='font-size:10px;'>&#9999; </span> Cài đặt workspace bằng lệnh  <span style="color:#ec4261"> npx create-nx-workspace@latest</span>
+</div> -->
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<div>
+<span style='font-size:20px;'>&#10024; </span>
+<strong>Clone và run project</strong>
+<p><span style='font-size:10px;'>&#9999; </span>Cài đặt Nx CLI: npm install -g nx</p>
+<p><span style='font-size:10px;'>&#9999; </span>Cài đặt các thư viện: yarn install</p>
+<div><span style='font-size:10px;'>&#11088;</span> Công cụ hỗ trợ</div>
+<p><span style='font-size:10px;'>&#9999; </span> Cài đặt Nx console bằng extension của vscode (sau khi cài die vscode khởi động lại để apply hoàn toàn extension)</p>
+</div>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<p style='font-size:20px;margin-top:50px'>
+ <span>&#9749; </span>
+ <strong>Thiết lập Capacitor cho Project</strong>
+ <span> &#9749;</span>
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<div>
+<p>
+<div>
+<span style='font-size:10px;'>&#9999; </span> Add librarry capacitor: 
+</div>
+<div style="color:#ec4261">yarn add --save-dev --exact @nxtend/capacitor</div>
+</p>
 
-## Learn More
+<p>
+<div>
+<span style='font-size:10px;'>&#9999; </span> Add capacitor in exist project: 
+</div>
+<div style="color:#ec4261">nx generate @nxtend/capacitor:capacitor-project {Capacitor project name} --project {frontend project name}
+</div>
+<div>
+<span style="text-decoration: underline;">example: </span>  nx generate @nxtend/capacitor:capacitor-project mobile-ap --project mobile-app
+</div>
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+<p>
+<div>
+<span style='font-size:10px;'>&#9999; </span> Add platform: 
+</div>
+<div style="color:#ec4261">nx run {Capacitor project name}:add --platform {native platform}
+</div>
+<div>
+<span style="text-decoration: underline;">example: </span>  nx run mobile-app-cap:add --platform android/ ios
+</div>
+</p>
+</div>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p>
+<div>
+<span style='font-size:10px;'>&#9999; </span> Sync project to web from app: ( web phải được export trước khi sync)
+</div>
+<div style="color:#ec4261">nx run {Capacitor project name}:sync --platform {native platform}
+</div>
+<div>
+<span style="text-decoration: underline;">example: </span>  nx run mobile-app-cap:sync --platform android/ ios
+</div>
+</p>
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p>
+<div>
+<span style='font-size:10px;'>&#9999; </span> Open platform
+</div>
+<div style="color:#ec4261">nx run {Capacitor project name}:open --platform {native platform}
+</div>
+<div>
+<span style="text-decoration: underline;">example: </span>  nx run mobile-app-cap:open --platform android/ ios
+</div>
+</p>
+</div>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+// @ts-ignore : bỏ qua các lỗi liên quan tới cấu trúc bị vi phạm khi dùng typescript
